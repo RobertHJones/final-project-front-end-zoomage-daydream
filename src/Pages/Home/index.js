@@ -78,6 +78,7 @@ import API_URL from "../../config";
 const Home = () => {
   const { user, isAuthenticated } = useAuth0();
   const [spaces] = useFetch(`${API_URL}/spaces/`);
+  console.log(spaces);
   // const arrays = spaces.payload.slice(0, 7);
   const [users] = useFetch(`${API_URL}/users/`);
 
