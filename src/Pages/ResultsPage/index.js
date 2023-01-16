@@ -38,7 +38,8 @@ const Result = () => {
         <div className={css.locAndFilter}>
           {" "}
           <p className={css.locationName}>
-            Results found for {results[0].address.split(" ")[3].slice(0, 10)}
+            Results found for{" "}
+            {results && results[0].address.split(" ")[3].slice(0, 10)}
           </p>
           <div className={css.filter}>
             <select onChange={sortHighToLow} className={css.filterButton}>
