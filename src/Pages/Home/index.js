@@ -78,7 +78,7 @@ import API_URL from "../../config";
 const Home = () => {
   const { user, isAuthenticated } = useAuth0();
   const [spaces] = useFetch(`${API_URL}/spaces/`);
-  const arrays = spaces.payload.slice(0, 7);
+  // const arrays = spaces.payload.slice(0, 7);
   const [users] = useFetch(`${API_URL}/users/`);
 
   const navigate = useNavigate();
@@ -104,7 +104,7 @@ const Home = () => {
       <SearchForm />
       <div className={css.cards}>
         {" "}
-        {arrays.map((item, index) => {
+        {spaces.map((item, index) => {
           return (
             <HomeCard
               image={item.images[0]}
